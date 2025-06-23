@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "657994985824",
+    "project_id": "ticktacktoeinbal",
+    "storage_bucket": "ticktacktoeinbal.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:657994985824:android:eda736f488c6604665ae05",
+        "android_client_info": {
+          "package_name": "inbal.dolev.ticktacktoeinbal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcCldHEisB_X5QTijD5BDpPOZEbI2hqVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

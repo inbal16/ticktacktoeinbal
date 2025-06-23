@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/x"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/playerTurnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player Turn: X"
+        android:textSize="24sp"
+        android:textColor="#333"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_marginBottom="24dp">
+
+        <!-- 9 buttons -->
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"/>
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textSize="24sp"
+            android:textColor="#000"
+            android:background="#F8BBD0"
+            android:layout_margin="4dp"
+            />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Game"
+        android:textSize="18sp"
+        android:backgroundTint="#F8BBD0"
+        android:textColor="#0B0A0A"
+        android:padding="12dp"
+        android:layout_marginTop="12dp" />
+</LinearLayout>
