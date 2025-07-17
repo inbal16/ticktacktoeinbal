@@ -7,6 +7,8 @@ public class Player {
     private String email;
     private int score;
 
+    public Player() {
+    }
     public Player(String uid) {
         this.uid = uid;
     }

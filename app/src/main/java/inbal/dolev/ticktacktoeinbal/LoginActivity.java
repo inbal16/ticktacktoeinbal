@@ -71,13 +71,21 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            tVMsg.setText("נרשמת בהצלחה!");
                             FirebaseUser user = refAuth.getCurrentUser();
-                            tVMsg.setText("User created successfully\nUid: "+user.getUid());
+                            String uid = user.getUid();
+                            String name = eTName.getText().toString().trim();
+                            String email = eTEmail.getText().toString().trim();
+
+                            Player newPlayer = new Player(uid, name, email, 0);
+                            FBRef.refPlayers.child(uid).setValue(newPlayer);
+
+                            // המשך הניווט ל-MainActivity
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                             finish();
-                        } else {
+                        }
+
+                    else {
                             tVMsg.setText("שגיאה: " + task.getException().getMessage());
                         }
                     }
