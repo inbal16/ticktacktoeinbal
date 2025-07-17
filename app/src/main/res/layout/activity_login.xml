@@ -27,6 +27,18 @@
         android:layout_height="wrap_content"
         android:hint="הכנס סיסמה"
         android:inputType="textPassword" />
+    <ImageView
+        android:id="@+id/profilePreview"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_person" />
+
+    <Button
+        android:id="@+id/btnSelectImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="בחר תמונת פרופיל" />
 
     <Button
         android:id="@+id/btnRegister"

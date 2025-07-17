@@ -18,6 +18,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.Locale;
 import android.util.Log;
+
+import com.squareup.picasso.Picasso;
+
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -45,6 +48,20 @@ public class MainActivity extends AppCompatActivity {
             playerX = snapshot.getValue(Player.class);
             isPlayerXLoaded = true;
             checkIfBothPlayersLoaded();
+        });
+        ImageView profileImageView = findViewById(R.id.profileImageView);
+        String uid = FBRef.refAuth.getCurrentUser().getUid();
+
+        FBRef.refPlayers.child(uid).get().addOnSuccessListener(snapshot -> {
+            Player player = snapshot.getValue(Player.class);
+            if (player != null && player.getProfileImageUrl() != null) {
+                // טוען את התמונה מהכתובת
+                Picasso.get()
+                        .load(player.getProfileImageUrl())
+                        .placeholder(R.drawable.ic_person) // תצוגה זמנית לפני שהטען
+                        .error(R.drawable.ic_person)// תצוגה במקרה של שגיאה
+                        .into(profileImageView);
+            }
         });
 
     // אתחול של המחשב כשחקן

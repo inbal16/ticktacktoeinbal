@@ -6,7 +6,15 @@ public class Player {
     private String name;
     private String email;
     private int score;
+    private String profileImageUrl;
 
+    public String getProfileImageUrl() {
+        return profileImageUrl;
+    }
+
+    public void setProfileImageUrl(String profileImageUrl) {
+        this.profileImageUrl = profileImageUrl;
+    }
     public Player() {
     }
     public Player(String uid) {
@@ -18,6 +26,7 @@ public class Player {
         this.name = name;
         this.email = email;
         this.score = score;
+        this.profileImageUrl = null; // Default value, can be set later
     }
 
     public String getUid() {

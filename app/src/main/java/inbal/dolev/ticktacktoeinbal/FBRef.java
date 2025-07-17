@@ -3,6 +3,8 @@ package inbal.dolev.ticktacktoeinbal;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class FBRef {
 
@@ -16,7 +18,10 @@ public class FBRef {
     public static DatabaseReference refPlayers = FBDB.getReference("Players");
 
     public static DatabaseReference refGames = FBDB.getReference("Games");
-
+    // אחסון בענן - Cloud Storage
+    public static FirebaseStorage storage = FirebaseStorage.getInstance();
+    public static StorageReference refStorageRoot = storage.getReference();
+    public static StorageReference refProfileImages = refStorageRoot.child("profile_images");
 
 
     public static DatabaseReference getCurrentPlayerRef() {
