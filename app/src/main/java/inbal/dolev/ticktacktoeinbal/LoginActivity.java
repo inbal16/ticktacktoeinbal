@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.StorageReference;
 
 public class LoginActivity extends AppCompatActivity {
+
     private static final int IMAGE_PICK_CODE = 1000;
     private Uri selectedImageUri;
     private ImageView profileImageView;
@@ -49,9 +50,11 @@ public class LoginActivity extends AppCompatActivity {
         Button btnSelectImage = findViewById(R.id.btnSelectImage);
 
           btnSelectImage.setOnClickListener(v -> {
-              Intent intent = new Intent(Intent.ACTION_PICK);
+              Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
               intent.setType("image/*");
+              intent.addCategory(Intent.CATEGORY_OPENABLE);
               startActivityForResult(intent, IMAGE_PICK_CODE);
+
           });
 
           btnRegister.setOnClickListener(new View.OnClickListener() {
